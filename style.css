@@ -1,0 +1,324 @@
+@font-face {
+    font-family: Regular Oswald;
+    src: url(/Fonts/Oswald/static/Oswald-Regular.ttf)
+}
+@font-face {
+    font-family: Light Oswald;
+    src: url(/Fonts/Oswald/static/Oswald-Light.ttf)
+}
+@font-face {
+    font-family: Extra Light;
+    src: url(/Fonts/Oswald/static/Oswald-ExtraLight.ttf);
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x:hidden;
+}
+p, h1 {
+    margin: 0;
+    padding: 0;
+}
+/*MOBILE HEADER*/
+.mobile-header {
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.mobile-logo {
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+    padding: 16px;
+}
+.mobile-menu-btn {
+    display: inline-block;
+    padding: 16px;
+    cursor: pointer;
+}
+.bar {
+    background-color: #171717;
+    margin: 6px 0;
+    height: 3px;
+    transition: all ease 0.3s;
+}
+.bar1, .bar2 {
+    width: 30px;
+}
+.bar3 {
+    width: 15px;
+}
+.bar1.open {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.bar2.open {
+    opacity: 0;
+}
+.bar3.open {
+    width: 30px;
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+/* DESKTOP HEADER */
+.desktop-header {
+    display: none;
+    visibility: hidden;
+}
+/* OVERLAY MENU */
+.mobile-overlay-menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 100%;
+    top: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.4s;
+}
+.mobile-overlay-menu.open {
+    left: 0;
+}
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.overlay-menu-item {
+    font-family: Regular Oswald;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    margin: 6px 0;
+    transition: all ease 0.2s;
+}
+.overlay-menu-item:hover {
+    color: #545454;
+    text-decoration: underline;
+}
+.overlay-socnet {
+    padding: 15px;
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+}
+.overlay-socnet-items {
+    color: black;
+    margin: 0 6px;
+}
+/* REST OF THE HOME PAGE*/
+.container {
+    font-family: Regular Oswald;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 140px;
+}
+.img-holder {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 30px auto;
+    background: url(/images/uliana-kopanytsia-ooL2YwOwWC0-unsplash.jpg) center no-repeat;
+    background-size: 140%;
+}
+/* FOOTER */
+.footer-container {
+    font-family: Light Oswald;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.footer-menu i {
+    margin: 0 10px;
+    font-size: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer-menu-item {
+    color: black;
+    font-size: 20px;
+}
+.pedidos {
+    margin: 20px 0;
+}
+.pedidos p {
+    font-size: 15px;
+}
+.pedidos p span {
+    font-size: 20px;
+}
+.madeBy {
+    margin: 15px auto;
+    font-size: 14px;
+}
+.madeBy p a {
+    color: black;
+    text-decoration: none;
+}
+/* MENU PAGE */
+.menu-content {
+    margin-top: 140px;
+    width: 100%;
+}
+.menu-section {
+    margin-bottom: 50px;
+}
+.menu-title {
+    text-align: center;
+    font-family: Regular Oswald;
+    margin-bottom: 20px;
+}
+.menu-items {
+    font-family: Light Oswald;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+}
+.menu-item {
+    padding: 6px 0;
+    width: 80%;
+}
+.item-price {
+    text-align: right;
+}
+.item-description {
+    font-family: Extra Light;
+    font-size: 14px;
+}
+/* UBICACION PAGE */
+.location-container {
+    font-family: Regular Oswald;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 140px;
+}
+.map img {
+    height: auto;
+    max-width: 100%;
+}
+.eggs {
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    background: url(/images/eggs.jpg) center no-repeat;
+    background-size: 100%;
+}
+@media (min-width: 700px) {
+    .map {
+        height: auto;
+    }
+    .eggs {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .mobile-header {
+        visibility: hidden;
+        display: none;
+    }
+    .desktop-header {
+        top: 0;
+        visibility: visible;
+        display: block;
+        width: 100%;
+        position: fixed;
+        height: 100px;
+        z-index: 1001;
+        box-sizing: border-box;
+        padding: 1rem 3rem;
+        background-color: #ffffff;
+    }
+    .desktop-menu {
+        position: absolute;
+        left: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .desktop-menu-item {
+        font-family: Light Oswald;
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        margin: 0 6px ;
+        transition: all ease 0.2s;
+    }
+    .desktop-menu-item:hover {
+        color: #545454;
+        text-decoration: underline;
+    }
+    .desktop-logo {
+        position: absolute;
+        font-family: 'Satisfy', cursive;
+        font-size: 28px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    .desktop-menu-socnet {
+        position: absolute;
+        right: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .desktop-socnet-items {
+        margin: 0 6px;
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+        transition: all ease 0.2s;
+    }
+    .desktop-socnet-items:hover {
+        color: #545454;
+        text-decoration: underline;
+    }
+    .menu-content {
+        width: 50%;
+        margin: 140px auto 0 auto;
+    }
+    .menu-title {
+        margin-bottom: 40px;
+    }
+    .menu-items tbody {
+        column-count: 2;
+    }
+    .location-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+    .map {
+        grid-column: 7/-1;
+        grid-row: 1/span 2;
+        margin: 0;
+        justify-self: center;
+        align-self: center;
+    }
+    .ubicacion {
+        grid-column: 1/7;
+        grid-row: 1;
+    }
+    .horario {
+        grid-column: 1/7;
+        grid-row: 2;
+    }
+    .eggs {
+        width: 50%;
+        grid-column: 1/7;
+        grid-row: 3;
+    }
+}
+@media (min-width: 1500px) {
+    .menu-content {
+        width: 50%;
+    }
+}
